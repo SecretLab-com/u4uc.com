@@ -109,12 +109,14 @@ figcaption {
 .section {
   position: relative;
   overflow: hidden;
-  padding: 90px 56px;
+  padding: 40px 56px;
   background-color: #fff;
   text-align: center;
 }
 
 .section.grey-section {
+  padding-top: 60px;
+  padding-bottom: 100px;
   background-color: #fff;
   text-align: center;
 }
@@ -926,10 +928,7 @@ figcaption {
 }
 
 .side-frame {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
