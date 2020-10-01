@@ -6,7 +6,12 @@ Things we need to do:
 * Get a gift structure:  always 50/50 innovator/user
 1. Small teaching gift:  given a challenge try to innovate!
 2. Larger sponsorship gift (vetted challenge, vetted innovator)
-3.
+3. VC sponsorship (on demand, standard participation)
+
+# Search process
+1. Call for papers: we define challenges
+2. Call for challenges: based on skills 
+3. Partner network.
 
 * Get a process for challenge selection
 * Define partners
@@ -16,7 +21,7 @@ Things we need to do:
 1. Create a "hello world" website
   1. Just a simple preso and how to contact us (we are working on this)
     1. Make sure this has the basics of the "mission" implied in the graphics
-    1. Update this as we know more
+    2. Update this as we know more
    
 1. Create a "customer journey" for:
     * Innovators
