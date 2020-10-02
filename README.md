@@ -20,7 +20,7 @@ Things we need to do:
 # Website:
 1. Create a "hello world" website
   1. Just a simple preso and how to contact us (we are working on this)  
-    1. Make sure this has the basics of the "mission" implied in the graphics
+    1. Make sure this has the basics of the "mission" implied in the graphics  
     2. Update this as we know more
    
 1. Create a "customer journey" for:
