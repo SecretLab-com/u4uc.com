@@ -109,14 +109,18 @@ figcaption {
 .section {
   position: relative;
   overflow: hidden;
-  padding: 40px 56px;
+  margin-top: 100px;
+  margin-bottom: auto;
+  padding-right: 56px;
+  padding-left: 56px;
   background-color: #fff;
   text-align: center;
 }
 
 .section.grey-section {
-  padding-top: 60px;
-  padding-bottom: 100px;
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   background-color: #fff;
   text-align: center;
 }
@@ -132,6 +136,10 @@ figcaption {
 
 .section.no-top-padding {
   padding-top: 0px;
+}
+
+.section.no-top-padding.no-bottom-padding {
+  margin-top: auto;
 }
 
 .section.no-paddings {
@@ -224,11 +232,16 @@ figcaption {
 }
 
 .section.side-image-section.reversed {
+  display: block;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
   -webkit-flex-direction: row-reverse;
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .section.testimonials-section {
@@ -367,7 +380,11 @@ figcaption {
   top: 0px;
   right: 0px;
   z-index: 200;
+  display: block;
+  margin-top: auto;
+  margin-bottom: 59px;
   padding-right: 56px;
+  padding-bottom: 0px;
   padding-left: 56px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -447,6 +464,7 @@ figcaption {
 
 .divider.center {
   height: 5px;
+  margin-top: 9px;
   background-color: #fc0;
   line-height: 35px;
 }
@@ -474,9 +492,8 @@ figcaption {
 
 .section-header {
   display: inline-block;
-  margin-top: 0px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0px auto;
+  padding-top: 10px;
   padding-right: 0px;
   font-family: Montserrat, sans-serif;
   font-weight: 400;
@@ -588,8 +605,8 @@ figcaption {
 }
 
 .side-image-3.image-1 {
-  background-image: url('../images/BoyRedChair.jpg');
-  background-position: 10% 50%;
+  background-image: url('../images/InventorClass.jpg');
+  background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1365,11 +1382,12 @@ figcaption {
   border-style: solid;
   border-width: 1px;
   border-color: #fc0;
-  background-image: url('../images/HoldingHands.jpg');
-  background-position: 100% 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.65))), url('../images/BoyLearningToWalkCropped.jpg');
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../images/BoyLearningToWalkCropped.jpg');
+  background-position: 0px 0px, 50% 50%;
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+  background-attachment: scroll, fixed;
 }
 
 .hero-section.hero-light-bg-section {
@@ -1709,6 +1727,8 @@ figcaption {
 
 .page-wrapper {
   overflow: hidden;
+  white-space: normal;
+  background-clip: border-box;
 }
 
 .page-wrapper.overflow {
@@ -1802,9 +1822,9 @@ figcaption {
 }
 
 .page-header-section.about {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.6)), to(rgba(17, 17, 17, 0.6))), url('../images/climate-kic-350836.jpg');
-  background-image: linear-gradient(180deg, rgba(17, 17, 17, 0.6), rgba(17, 17, 17, 0.6)), url('../images/climate-kic-350836.jpg');
-  background-position: 0px 0px, 50% 28%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.6)), to(rgba(17, 17, 17, 0.6))), url('../images/rawpixel-com-323215.jpg');
+  background-image: linear-gradient(180deg, rgba(17, 17, 17, 0.6), rgba(17, 17, 17, 0.6)), url('../images/rawpixel-com-323215.jpg');
+  background-position: 0px 0px, 50% 0%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
   background-attachment: scroll, fixed;
@@ -3588,7 +3608,7 @@ figcaption {
   -ms-flex: 1;
   flex: 1;
   border-radius: 10px;
-  background-color: rgba(37, 37, 37, 0.8);
+  background-color: rgba(37, 37, 37, 0);
   color: #fff;
   text-align: center;
 }
@@ -3972,7 +3992,7 @@ figcaption {
 }
 
 .side-image.image-2 {
-  background-image: url('../images/GirlSignLanguage.jpg');
+  background-image: url('../images/Couple.jpg');
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -5314,6 +5334,80 @@ figcaption {
   text-align: center;
 }
 
+.heading-9 {
+  margin-top: 0px;
+  color: #777;
+}
+
+.heading-10 {
+  margin-top: 0px;
+  color: #777;
+}
+
+.heading-11 {
+  color: #777;
+  text-align: center;
+}
+
+.heading-12 {
+  color: #777;
+}
+
+.heading-13 {
+  color: #777;
+}
+
+.heading-14 {
+  color: #777;
+}
+
+.heading-15 {
+  color: #777;
+}
+
+.image-7 {
+  margin-top: auto;
+}
+
+.column-2 {
+  display: block;
+  border: 1px none #000;
+  background-image: url('../images/Climber.jpg');
+  background-position: 0px 0px;
+  background-size: cover;
+}
+
+.columns {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.column-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url('../images/BoyWalking.jpg');
+  background-position: 0px 0px;
+  background-size: cover;
+}
+
+.columns-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.column-4 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 @media screen and (max-width: 991px) {
   h1 {
     margin-top: 32px;
@@ -6590,6 +6684,10 @@ figcaption {
     font-size: 24px;
     line-height: 32px;
   }
+  .yellow-text {
+    font-size: 30px;
+    text-align: center;
+  }
   .section-header-icon {
     margin-bottom: 0px;
   }
@@ -6665,6 +6763,10 @@ figcaption {
   }
   .hero-light-image-content {
     text-align: left;
+  }
+  .hero-light-image-header {
+    line-height: 30px;
+    text-align: center;
   }
   .feature-block-v2 {
     padding-right: 6%;
@@ -6841,6 +6943,21 @@ figcaption {
   .changelog {
     width: 100%;
   }
+  .paragraph {
+    font-size: 20px;
+  }
+  .bold-text {
+    font-size: 30px;
+  }
+  .bold-text-2 {
+    font-size: 30px;
+  }
+  .bold-text-3 {
+    font-size: 30px;
+  }
+  .bold-text-4 {
+    font-size: 30px;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -6871,6 +6988,21 @@ figcaption {
   figure {
     margin-top: 24px;
     margin-bottom: 24px;
+  }
+  .section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .section.grey-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .section.cta-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-image: url('../images/like-bg-icon.png'), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+    background-image: url('../images/like-bg-icon.png'), linear-gradient(180deg, transparent, transparent);
+    background-size: 200px, auto;
   }
   .section.side-image-section {
     -webkit-box-orient: vertical;
@@ -6903,6 +7035,9 @@ figcaption {
     margin-bottom: 20px;
   }
   .divider {
+    display: none;
+    float: none;
+    clear: none;
     text-align: left;
   }
   .section-header-wrapper {
@@ -6911,8 +7046,12 @@ figcaption {
     padding-left: 8px;
   }
   .section-header {
+    width: 90%;
+    min-width: 0px;
     margin-right: 0px;
     margin-left: 0px;
+    font-size: 20px;
+    text-align: center;
   }
   .team-member {
     width: 100%;
@@ -6927,8 +7066,7 @@ figcaption {
     min-height: 240px;
   }
   .side-content-wrapper-50 {
-    padding-right: 16px;
-    padding-left: 16px;
+    padding: 40px 16px;
     -webkit-box-flex: 0;
     -webkit-flex: 0 auto;
     -ms-flex: 0 auto;
@@ -7058,6 +7196,22 @@ figcaption {
     -webkit-flex-direction: column-reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
+  }
+  .hero-section.hero-light-image-section {
+    display: block;
+    height: auto;
+    min-height: auto;
+    padding-right: 14px;
+    padding-bottom: 0px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-style: none;
   }
   .hero-section.hero-side-image-section {
     padding-bottom: 40px;
@@ -7212,6 +7366,9 @@ figcaption {
   .pricing {
     margin-bottom: -24px;
   }
+  .yellow-text {
+    font-size: 30px;
+  }
   .facts {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -7327,13 +7484,20 @@ figcaption {
     width: 100%;
   }
   .hero-light-image-content {
-    padding-top: 24px;
-    padding-bottom: 38px;
+    margin-bottom: 114px;
+    padding: 0px;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
     text-align: center;
+  }
+  .hero-light-image-header {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+    line-height: 30px;
   }
   .feature-block-v2 {
     -webkit-flex-basis: 80%;
@@ -7343,6 +7507,8 @@ figcaption {
   }
   .side-content {
     width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -7361,6 +7527,8 @@ figcaption {
   }
   .feature-cell {
     width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .skills {
     -webkit-box-orient: vertical;
@@ -7390,12 +7558,18 @@ figcaption {
     padding-right: 16px;
     padding-left: 16px;
   }
+  .side-content-wrapper.right {
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
   .side-content-big {
+    display: block;
     width: 100%;
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
+    text-align: center;
   }
   .side-review-slide {
     margin-bottom: 24px;
@@ -7574,8 +7748,30 @@ figcaption {
   .question-icon {
     display: none;
   }
+  .paragraph {
+    width: 80%;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    padding-left: 0px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .bold-text {
+    font-size: 30px;
+  }
   .paragraph-6 {
     margin-right: 0px;
+  }
+  .image-6 {
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  .bold-text-2 {
+    font-size: 30px;
+  }
+  .column {
+    padding-right: 0px;
+    padding-left: 0px;
   }
 }
 
