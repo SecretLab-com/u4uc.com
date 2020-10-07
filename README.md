@@ -4,12 +4,14 @@ Things we need to do:
 * Define the mission and vision
   *  Mission:  Inspire people to look for Innovations to solve challenges in lives around them.  Inspire people to see past differences in appearance, and accept people for who they are.
 
-* Get a gift structure:  always 50/50 innovator/user
+## TBD: Integrate Gifting proposals:
+#### S&H proposal here:  [U4UC Structure of Giving.pdf](https://github.com/SecretLab-com/u4uc.com/blob/dev/U4UC%20Structure%20of%20Giving.pdf)
+#### Jason Bright Proposal:  always 50/50 innovator/user
 1. **Small teaching gift**:  given a challenge try to innovate!
     1. Timed to educational schedule of named partners
     2. Target:  (~2K)
 3. **Larger sponsorship gift** (vetted challenge, vetted innovator)
-    1. *Timed: to be discussed.*
+    1. *Timed: TBD*
     2. Target: (~25K)
 5. **VC sponsorship** (on demand, standard incubator participation)
   	1. Timed: on-demand
