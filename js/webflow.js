@@ -20444,7 +20444,7 @@ Webflow.define('slider', module.exports = function ($, _) {
     }
 
     if ($el.attr('role') === undefined) {
-      $el.attr('role', 'section');
+      $el.attr('role', 'region');
     }
 
     if ($el.attr('aria-label') === undefined) {

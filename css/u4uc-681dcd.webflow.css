@@ -1,5 +1,5 @@
 h1 {
-  margin-top: 40px;
+  margin-top: 0px;
   margin-bottom: 24px;
   font-size: 64px;
   line-height: 72px;
@@ -109,8 +109,7 @@ figcaption {
 .section {
   position: relative;
   overflow: hidden;
-  margin-top: 100px;
-  margin-bottom: auto;
+  margin: 40px auto;
   padding-right: 56px;
   padding-left: 56px;
   background-color: #fff;
@@ -1375,19 +1374,12 @@ figcaption {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #fc0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.65))), url('../images/BoyLearningToWalkCropped.jpg');
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../images/BoyLearningToWalkCropped.jpg');
-  background-position: 0px 0px, 50% 50%;
-  background-size: auto, cover;
-  background-repeat: repeat, no-repeat;
-  background-attachment: scroll, fixed;
+  border: 0px none transparent;
+  background-image: url('../images/RoboticArm.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .hero-section.hero-light-bg-section {
@@ -2712,9 +2704,8 @@ figcaption {
   text-align: left;
 }
 
-.yellow-text {
-  color: #fff;
-  font-size: 50px;
+.titletext {
+  margin-left: 10px;
 }
 
 .hero-dark-image-text {
@@ -3587,9 +3578,7 @@ figcaption {
   display: -ms-flexbox;
   display: flex;
   max-width: 770px;
-  padding-right: 26px;
-  padding-bottom: 22px;
-  padding-left: 18px;
+  padding: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -3599,26 +3588,45 @@ figcaption {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
   border-radius: 10px;
-  background-color: rgba(37, 37, 37, 0);
+  background-color: hsla(0, 0%, 100%, 0.8);
   color: #fff;
   text-align: center;
 }
 
 .hero-light-image-header {
-  margin: 40px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   font-family: Montserrat, sans-serif;
-  font-size: 50px;
-  line-height: 60px;
+  color: #000;
+  font-size: 40px;
+  line-height: 44px;
   font-weight: 500;
+}
+
+.hero-light-image-header.bold-text-small {
+  line-height: 40px;
 }
 
 .feature-block-v2 {
@@ -5220,12 +5228,17 @@ figcaption {
 }
 
 .paragraph {
-  margin-top: -19px;
-  color: #fc0;
-  font-size: 24px;
+  margin-top: 0px;
+  padding-left: 0px;
+  font-family: Montserrat, sans-serif;
+  color: #000;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
 }
 
 .bold-text {
+  color: #000;
   font-size: 50px;
 }
 
@@ -5325,9 +5338,17 @@ figcaption {
 }
 
 .image-6 {
-  max-width: 30%;
-  margin-top: 52px;
+  position: static;
+  max-width: 130px;
+  margin-top: 0px;
   margin-bottom: 0px;
+  clear: none;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  -ms-grid-row-align: auto;
+  align-self: auto;
+  -o-object-fit: scale-down;
+  object-fit: scale-down;
 }
 
 .container {
@@ -5363,6 +5384,19 @@ figcaption {
 
 .heading-15 {
   color: #777;
+}
+
+.bold-text-2 {
+  color: #000;
+}
+
+.bold-text-3 {
+  color: #000;
+}
+
+.bold-text-4 {
+  -o-object-fit: fill;
+  object-fit: fill;
 }
 
 .image-7 {
@@ -5406,6 +5440,73 @@ figcaption {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.homecolumns {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 40px;
+  margin-left: 40px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+}
+
+.column-5 {
+  padding-right: 0px;
+  padding-left: 0px;
+  -o-object-fit: fill;
+  object-fit: fill;
+}
+
+.div-block-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  font-weight: 700;
+}
+
+.div-block-4 {
+  width: 100%;
+  height: 44px;
+}
+
+.image-8 {
+  max-width: 80%;
+}
+
+.bold-text-small {
+  clear: none;
+  font-style: normal;
+  font-weight: 400;
+  -o-object-fit: fill;
+  object-fit: fill;
+}
+
+.text-span-5 {
+  width: 10px;
+  font-size: 30px;
+  line-height: 46px;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 991px) {
@@ -5670,8 +5771,6 @@ figcaption {
     padding-left: 0px;
   }
   .hero-section.hero-light-image-section {
-    height: auto;
-    min-height: 480px;
     background-attachment: scroll;
   }
   .hero-section.hero-light-bg-section {
@@ -6047,8 +6146,16 @@ figcaption {
     padding-left: 16px;
   }
   .hero-light-image-content {
+    display: block;
     margin-left: 0px;
-    padding: 0px 20px 20px;
+    padding-top: 0px;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+  .hero-light-image-header.bold-text-small {
+    margin-top: 0px;
+    line-height: 36px;
   }
   .feature-block-v2 {
     padding-top: 24px;
@@ -6321,6 +6428,19 @@ figcaption {
   }
   .change {
     padding: 24px;
+  }
+  .paragraph {
+    text-align: center;
+  }
+  .div-block-3 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .text-span-5 {
+    font-size: 20px;
+    line-height: 44px;
   }
 }
 
@@ -6684,7 +6804,7 @@ figcaption {
     font-size: 24px;
     line-height: 32px;
   }
-  .yellow-text {
+  .titletext {
     font-size: 30px;
     text-align: center;
   }
@@ -6944,7 +7064,8 @@ figcaption {
     width: 100%;
   }
   .paragraph {
-    font-size: 20px;
+    font-size: 18px;
+    text-align: center;
   }
   .bold-text {
     font-size: 30px;
@@ -6957,6 +7078,12 @@ figcaption {
   }
   .bold-text-4 {
     font-size: 30px;
+  }
+  .bold-text-small {
+    font-style: normal;
+  }
+  .text-span-5 {
+    font-size: 20px;
   }
 }
 
@@ -7366,7 +7493,7 @@ figcaption {
   .pricing {
     margin-bottom: -24px;
   }
-  .yellow-text {
+  .titletext {
     font-size: 30px;
   }
   .facts {
@@ -7484,7 +7611,7 @@ figcaption {
     width: 100%;
   }
   .hero-light-image-content {
-    margin-bottom: 114px;
+    margin-bottom: 20px;
     padding: 0px;
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -7493,9 +7620,9 @@ figcaption {
     text-align: center;
   }
   .hero-light-image-header {
-    margin-top: 20px;
-    margin-right: 20px;
-    margin-left: 20px;
+    position: relative;
+    display: block;
+    margin: 0px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -7750,7 +7877,7 @@ figcaption {
   }
   .paragraph {
     width: 80%;
-    margin-top: -20px;
+    margin-top: 20px;
     margin-bottom: 20px;
     padding-left: 0px;
     font-size: 16px;
@@ -7763,7 +7890,16 @@ figcaption {
     margin-right: 0px;
   }
   .image-6 {
-    margin-top: 20px;
+    margin-top: -30px;
+    margin-bottom: -30px;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     font-size: 12px;
   }
   .bold-text-2 {
@@ -7772,6 +7908,31 @@ figcaption {
   .column {
     padding-right: 0px;
     padding-left: 0px;
+  }
+  .homecolumns {
+    position: static;
+    overflow: visible;
+    margin-bottom: 10px;
+    border: 1px none #000;
+    background-clip: border-box;
+    -o-object-fit: fill;
+    object-fit: fill;
+  }
+  .div-block-3 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
   }
 }
 
