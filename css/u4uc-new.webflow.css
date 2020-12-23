@@ -110,7 +110,8 @@ p {
 }
 
 .text.center.white.mobilel.smphone {
-  width: 60%;
+  -o-object-fit: fill;
+  object-fit: fill;
 }
 
 .text.center.white.small {
