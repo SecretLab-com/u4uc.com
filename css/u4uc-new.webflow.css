@@ -3,7 +3,6 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 750px;
   min-height: 400px;
   margin-right: -6px;
   -webkit-box-orient: vertical;
@@ -91,13 +90,31 @@
 }
 
 .text.center.white {
+  width: auto;
   margin-bottom: 40px;
+  padding-right: 0px;
   color: #fff;
 }
 
 .text.center.white.mobilel.smphone {
   width: 60%;
   padding-right: 0px;
+  text-align: left;
+}
+
+.text.center.white.small {
+  width: auto;
+  text-align: center;
+}
+
+.text.center.white.right {
+  width: auto;
+  text-align: right;
+}
+
+.text.center.white.short {
+  width: 60%;
+  text-align: center;
 }
 
 .text.right {
@@ -274,8 +291,68 @@
   background-image: url('../images/Couple.jpg');
   background-position: 62% 50%;
   background-size: cover;
+  background-repeat: no-repeat;
   -o-object-fit: scale-down;
   object-fit: scale-down;
+}
+
+.column-7.jason {
+  position: relative;
+  z-index: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  clear: left;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  background-image: url('../images/5f7260923254824c5981ca06_JasonBright.png');
+  background-position: 50% 35%;
+  background-size: cover;
+  -o-object-fit: none;
+  object-fit: none;
+}
+
+.column-7.matt {
+  margin-top: 0px;
+  background-image: url('../images/5f73507db86694303829f7a8_MattDornquast.png');
+}
+
+.column-7.s-h {
+  margin-top: 0px;
+  background-image: url('../images/5f6e42d4997af8f9073b7925_ShaneHannah.png');
+  background-position: 0% 20%;
+}
+
+.column-7.kayla {
+  margin-top: 0px;
+  background-image: url('../images/ProfessionalProfile.jpg');
+}
+
+.column-7.john {
+  margin-top: 0px;
+  background-color: #3d3d3d;
+  background-image: url('../images/John-portrait.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.column-7.carol {
+  margin-top: 0px;
+  background-image: url('../images/5f734f4f0a3c20d0d73bde78_DrCarolLange.jpg');
+}
+
+.column-7.ed {
+  margin-top: 0px;
+  background-image: url('../images/5f6e4444997af8dbf83b8078_Ed-Clark.png');
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
 .heading-2 {
@@ -452,22 +529,43 @@
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
   -webkit-box-flex: 0;
-  -webkit-flex: 0 auto;
-  -ms-flex: 0 auto;
-  flex: 0 auto;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.columns-7.reversed {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .column-13 {
   padding-right: 30px;
   padding-left: 0px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+.column-13.left {
+  padding-right: 0px;
+  padding-left: 30px;
 }
 
 .text-block {
