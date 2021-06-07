@@ -36,7 +36,7 @@ p {
 
 .h1-large {
   margin-left: 0px;
-  background-color: #505050;
+  background-color: #000;
   font-family: Montserrat, sans-serif;
   color: #000;
   font-size: 45px;
@@ -78,6 +78,10 @@ p {
 }
 
 .h1.gold {
+  color: #fc0;
+}
+
+.h1.smphone {
   color: #fc0;
 }
 
@@ -138,6 +142,10 @@ p {
   text-align: right;
 }
 
+.text.right.centermobile {
+  color: #fff;
+}
+
 .text.white {
   margin-top: 20px;
   color: #fff;
@@ -154,12 +162,18 @@ p {
 }
 
 .text.white.center.high.mobiletext.small {
+  margin-top: 10px;
   padding-right: 10px;
 }
 
 .text.white.center.high.small {
+  margin-top: 10px;
   margin-right: -14px;
   padding-right: 6px;
+}
+
+.text.centermobile {
+  color: #fff;
 }
 
 .text-emphasis {
@@ -233,6 +247,7 @@ p {
 
 .div-block.spacer {
   border-radius: 20px;
+  color: #000;
 }
 
 .div-block.long {
@@ -280,6 +295,7 @@ p {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #000;
 }
 
 .section-3 {
@@ -306,6 +322,7 @@ p {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #000;
 }
 
 .column-7 {
@@ -403,12 +420,21 @@ p {
   background-color: #505050;
 }
 
+.section-5.tablet.mobilespace {
+  background-color: #000;
+}
+
 .container-3 {
   border-style: solid;
   border-width: 6px;
   border-color: hsla(0, 0%, 100%, 0.85);
   border-radius: 6px;
   background-color: #bcbcbc;
+}
+
+.container-3.mobile {
+  border-style: none;
+  background-color: #2f2f2f;
 }
 
 .image-2 {
@@ -462,7 +488,7 @@ p {
 .section-7 {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #505050;
+  background-color: #000;
 }
 
 .div-block-3 {
@@ -473,7 +499,7 @@ p {
 
 .section-8 {
   padding-bottom: 100px;
-  background-color: #505050;
+  background-color: #000;
 }
 
 .link {
@@ -516,6 +542,7 @@ p {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 20px;
 }
 
 .logoandtitle {
@@ -600,11 +627,11 @@ p {
 }
 
 .body {
-  background-color: #505050;
+  background-color: #000;
 }
 
 .navbar {
-  background-color: #505050;
+  background-color: #000;
 }
 
 .image-4 {
