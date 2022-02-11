@@ -31607,7 +31607,7 @@ Object.keys(_ParamFieldPathUtils).forEach(function (key) {
   paths.PEOPLE_SAMPLE_IMG_PATH = CDN_ROOT + 'img/people/image'; // Each node in the canvas that has a DomNode attached to it will also have a data-w-id attribute that stores the node's guid
   // In most cases, these IDs are not persisted to the server, but they saved for typographic node descendants (micro nodes)
 
-  api.WEBFLOW_NODE_ID_ATTR = 'data-w-id'; // This is the dom node attribute used to expressed the exact path to a dom node.
+  api.WEBFLOW_NODE_ID_ATTR = 'data-w-id'; // This is the dom node attribute used to express the exact path to a dom node.
 
   api.WEBFLOW_NODE_ID_PATH_ATTR = 'data-wf-id'; // For symbol instance descendants we keep the original id in a different attribute
 
@@ -32815,7 +32815,7 @@ Object.keys(_ParamFieldPathUtils).forEach(function (key) {
   //    with 2 digits, since the currency is still commonly formatted as "1$00". ¯\_(ツ)_/¯
   //  - ISK had a subunit (eyrir) that was obsoleted in 2003, but Stripe sticks with 2 digits instead of
   //    the ISO's 0.
-  //  - MGA is strange, since it's smallest denomination is a 1/5th piece (the Iraimbilanja), but is
+  //  - MGA is strange, since its smallest denomination is a 1/5th piece (the Iraimbilanja), but is
   //    represented as a decimal, so the currency goes "1.3, 1.4, 2.0, ...". Stripe dodges this strangeness
   //    by ignoring that minimum unit, and so do we, since it has so little value.
   //  - UGX had a subunit (cent) that was discontinued in 2013. Stripe still counts it, tho, even though
@@ -33506,7 +33506,7 @@ Object.keys(_ParamFieldPathUtils).forEach(function (key) {
 
   for (index = 0; index < api.stripeCurrencyList.length; index++) {
     api.stripeCurrencyCodes[api.stripeCurrencyList[index].code] = true;
-  } // Note: These currencies are extracted by getting Paypal compatible currencies from:
+  } // Note: These currencies are extracted by getting PayPal compatible currencies from:
   //
   // curl https://developer.paypal.com/docs/api/reference/currency-codes
   //
@@ -38708,36 +38708,63 @@ Object.keys(_ParamFieldPathUtils).forEach(function (key) {
     name: 'Quick Add Template',
     description: 'Start from a blank canvas — and build exactly what you’re envisioning.',
     starter: true
-  };
+  }; // We sanitize data from our customer to help them submit a valid VAT.
+
+  api.vatSanitizers = {
+    // Prefix with zero if the customer provides a 9 digit VAT number
+    BE: function BE(vat) {
+      var digits = vat.replace(/\D/g, '');
+      return digits.length === 9 ? 'BE0' + digits : vat;
+    },
+    // Allow optional dash in the VAT ID
+    DK: function DK(vat) {
+      return vat.replace('DK-', 'DK');
+    },
+    // If more than 10 characters are provided delete the first 3
+    CZ: function CZ(vat) {
+      var digits = vat.replace(/\D/g, '');
+      return digits.length > 10 ? 'CZ' + digits.substring(3) : vat;
+    }
+  }; // This could be extended to include a math checksum validation step.
+  // Most EU countries have a checksum digit that we could check against.
+  //
+  // @link https://github.com/se-panfilov/jsvat for an implementation.
+
   api.vatVerifiers = {
-    AT: /ATU\d{9}/,
-    BE: /BE[01]\d{9}/,
-    BG: /BG\d{9,10}/,
-    CY: /CY\d{8}[A-Z]/,
-    CZ: /CZ\d{8,10}/,
-    DE: /DE\d{9}/,
-    DK: /DK(?:[- ]*\d\d){4}/,
-    EE: /EE\d{9}/,
-    EL: /EL\d{9}/,
-    ES: /ES[A-Z\d]\d{7}[A-Z\d]/,
-    FI: /FI\d{8}/,
-    FR: /FR[A-Z\d]{2}[- ]*\d{9}/,
-    HR: /HR\d{11}/,
-    HU: /HU\d{8}/,
-    IE: /IE(?:\d[A-Z\d+*]\d{5}[A-Z]|\d{7}WI)/,
-    IT: /IT\d{11}/,
-    LT: /LT\d{9}(?:\d{3})?/,
-    LU: /LU\d{8}/,
-    LV: /LV\d{11}/,
-    MT: /MT\d{8}/,
-    NL: /NL[A-Z\d]{12}/,
-    PL: /PL\d{10}/,
-    PT: /PT\d{9}/,
-    RO: /RO\d{2,10}/,
-    SE: /SE\d{12}/,
-    SI: /SI\d{8}/,
-    SK: /SK\d{10}/,
-    XI: /XI(?:\d{3}[- ]*\d{4}[- ]*\d{2}(?:[- ]*\d{3})?|(?:GD|HA)\d{3})/
+    AT: /^(AT)U(\d{8})$/,
+    BE: /^(BE)(0?\d{9})$/,
+    BG: /^(BG)(\d{9,10})$/,
+    CY: /^(CY)([0-59]\d{7}[A-Z])$/,
+    CZ: /^(CZ)\d{8,10}$/,
+    DE: /^(DE)([1-9]\d{8})$/,
+    DK: /^(DK)(\d{8})$/,
+    EE: /^(EE)(10\d{7})$/,
+    EL: /^(EL)(\d{9})$/,
+    ES: /^(ES)([A-Z\d]\d{7}[A-Z\d])$/,
+    FI: /^(FI)(\d{8})$/,
+    FR: /^(FR)(?![IO])[A-Z\d]{2}[- ]*\d{9}$/,
+    HR: /^(HR)(\d{11})$/,
+    HU: /^(HU)(\d{8})$/,
+    IE: /^(IE)(?:\d[A-Z\d+*]\d{5}[A-Z]|\d{7}WI)$/,
+    IT: /^(IT)(\d{11})$/,
+    LT: /^(LT)(\d{9}|\d{12})$/,
+    LU: /^(LU)(\d{8})$/,
+    LV: /^(LV)(\d{11})$/,
+    MT: /^(MT)([1-9]\d{7})$/,
+    NL: /^(NL)([0-9]{9}[B][O0-9]{2})$/,
+    PL: /^(PL)(\d{10})$/,
+    PT: /^(PT)(\d{9})$/,
+    RO: /^(RO)([1-9]\d{1,9})$/,
+    SE: /^(SE)(\d{12})$/,
+    SI: /^(SI)([1-9]\d{7})$/,
+    SK: /^(SK)([1-9]\d[2346-9]\d{7})$/,
+    // This is the Great Britain regex, with XI switched for GB
+    XI: /^(XI)(?:\d{3}[- ]*\d{4}[- ]*\d{2}(?:[- ]*\d{3})?|(?:GD|HA)\d{3})$/
+  };
+
+  api.sanitizeVat = function (params) {
+    var sanitizer = api.vatSanitizers[params.countryCode];
+    return sanitizer ? sanitizer(params.vat) : params.vat;
   };
   /**
    * Verify if the matching country and VAT value passes
@@ -38747,6 +38774,7 @@ Object.keys(_ParamFieldPathUtils).forEach(function (key) {
    * @param {string} vat tax vat value to validate
    * @returns Boolean
    */
+
 
   api.verifyVat = function (params) {
     var regex = api.vatVerifiers[params.countryCode];
@@ -38856,6 +38884,9 @@ Object.keys(_ParamFieldPathUtils).forEach(function (key) {
   }, {
     code: 'SK',
     country: 'Slovakia'
+  }, {
+    code: 'XI',
+    country: 'Northern Ireland'
   }];
 
   api.isInEuVatCountry = function (countryCode) {
@@ -38878,7 +38909,7 @@ Object.keys(_ParamFieldPathUtils).forEach(function (key) {
   api.showcaseTagConfig = {
     seoTemplates: {
       pageTitle: 'The best %tag_label% websites',
-      pageDescription: 'Discover the best %tag_label% websites created by professional designers. Get inspired and and start planning your perfect %tag_label% web design today!',
+      pageDescription: 'Discover the best %tag_label% websites created by professional designers. Get inspired and start planning your perfect %tag_label% web design today!',
       mainHeadingText: 'Discover %tag_label% websites from the Webflow community',
       introParagraphText: 'The Webflow Showcase is the place to find, clone, follow, like, and comment on the latest community sites.'
     },
@@ -39660,6 +39691,7 @@ Object.keys(_ParamFieldPathUtils).forEach(function (key) {
     target.stripeCountryCodes = api.stripeCountryCodes;
     target.stripeCurrencyCodes = api.stripeCurrencyCodes;
     target.stripeCurrencyList = api.stripeCurrencyList;
+    target.sanitizeVat = api.sanitizeVat;
     target.verifyVat = api.verifyVat;
     target.verifyVatAnyCountry = api.verifyVatAnyCountry;
     target.euVatSupportedCountries = api.euVatSupportedCountries;
